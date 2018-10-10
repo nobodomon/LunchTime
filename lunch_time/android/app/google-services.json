@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1013893126662",
+    "firebase_url": "https://lunchtime-7c94b.firebaseio.com",
+    "project_id": "lunchtime-7c94b",
+    "storage_bucket": "lunchtime-7c94b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013893126662:android:a60e5f33bf59a3e2",
+        "android_client_info": {
+          "package_name": "com.sitclub.lunchtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013893126662-6jcb8mh2s9he3h864vnq9dt7jfbj6skr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4-h5JsNtcgJdujf9gK5PgChGPzudQD0U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
