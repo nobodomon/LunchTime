@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'result.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -55,12 +55,21 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     viewResult(){
-      var rng = new Random();
+      int i;
+      Firestore.instance.collection("Canteens").getDocuments().then((QuerySnapshot snapshot){
+        i = snapshot.documents.length;
+        var rng = new Random();
+        List<int> resultList = new List<int>();
+        for(int j = 0; j<3;j++){
+          resultList.add(rng.nextInt(i));
+        }
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Result(rng.nextInt(5))
+          MaterialPageRoute(builder: (context) => Result(resultList)
           )
         );
+      });
+      
     }
     return new Scaffold(
       appBar: new AppBar(
